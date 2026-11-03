@@ -12,9 +12,3 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: update
-
-# Cấu hình log bị fix cứng cho mọi môi trường (đây là "lỗi" cần sửa trong bài tập)
-logging:
-  level:
-    root: DEBUG
-    com.example: TRACE
