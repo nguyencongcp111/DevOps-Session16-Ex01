@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: order-app
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:orderdb}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+
+# Cấu hình log bị fix cứng cho mọi môi trường (đây là "lỗi" cần sửa trong bài tập)
+logging:
+  level:
+    root: DEBUG
+    com.example: TRACE
